@@ -1,0 +1,54 @@
+/* font-family: 'Kalam', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Kalam', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root{
+    --bd-radius: 0.3rem;
+    --secondary-background-color: #4f5181;
+}
+
+body{
+    background-color: #343957;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data__container{
+    width: 40rem;
+}
+
+.search__box{
+    background-color: var(--secondary-background-color);
+    width: 100%;
+    height: 3.5rem;
+    border-radius: var(--bd-radius);
+    padding: 0.4rem;
+    width: 100%;
+}
+
+input[type='text']{
+    background-color: transparent;
+    height: 100%;
+    width: 34rem;
+}
+
+.search__box button{
+    background-color: #7a2be2;
+    border: none;
+    border-radius: var(--bd-radius);
+    height: 100%;
+    width: 5rem;
+}
