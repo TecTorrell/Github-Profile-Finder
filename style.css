@@ -1,17 +1,21 @@
-/* font-family: 'Kalam', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto Mono', monospace; */
-
-/* font-family: 'Inconsolata', monospace;
-font-family: 'Kalam', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto Mono', monospace; */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
+}
+
+.header__font{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.sub-header__font{
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 :root{
@@ -26,15 +30,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 8%;
 }
 
 
 /* logo styling */
 .logo__text{
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Kalam', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Mono', monospace; 
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5rem;
@@ -83,9 +84,6 @@ input[type='text']{
     padding-left: 3rem;
     transition: 300ms;
     font-size: 18px;
-    font-family: 'Kalam', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .search__box button{
@@ -96,9 +94,6 @@ input[type='text']{
     width: 6rem;
     margin-left: 1.2rem;
     cursor: pointer;
-    font-family: 'Kalam', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Mono', monospace;
     font-size: 15px;
 }
 /* search box area styling// */
@@ -134,3 +129,70 @@ input[type='text']{
     background-color: #00ade7;
 }
 /* github user image// */
+
+
+
+/* github bio data container */
+.github__bio__data__container{
+    width: 80%;
+    padding-top: .5rem;
+}
+
+.bio-data__header__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+.bio-data__header__container h1{
+    font-size: 23px;
+}
+
+.bio-data__header__container .name{
+    font-size: 13px;
+    color: #27c9ff;
+}
+
+.bio-data__header__container h2{
+    font-size: 12px;
+    font-weight: 100;
+    margin-top: 0.5rem;
+}
+
+.bio-data__header__container .date__joined{
+    font-weight: 600;
+}
+
+.user__bio{
+    text-align: center;
+}
+
+
+/* github user stats styling */
+.github__user__stats{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.358);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.stats__headers{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.stats__count{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.stats__divider{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0 3rem;
+}
+/* github user stats styling// */
+/* github bio data container// */

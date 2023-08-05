@@ -18,9 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Kalam:wght@300&family=Montserrat:wght@100;400;500&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <!-- //font two -->
 </head>
+
+
+
 <body>
     <div class="data__container">
-        <h1 class="logo__text">GitHub_Profile.Finder🌐</h1>
+        <h1 class="logo__text header__font">GitHub_Profile.Finder🌐</h1>
         <!-- search box -->
         <div class="search__box">
             <!-- search icon -->
@@ -31,8 +34,8 @@
             </div>
             <!-- /search icon -->
 
-            <input placeholder="Search GitHub username....." type="text">
-            <button>Search</button>
+            <input class="input sub-header__font" placeholder="Search GitHub username....." type="text">
+            <button class="sub-header__font">Search</button>
         </div>
         <!-- //search box -->
 
@@ -48,43 +51,38 @@
 
 
             <!-- github bio data container -->
-            <div>
-                <div>
-                    <h1>
+            <div class="github__bio__data__container">
+                <div class="bio-data__header__container">
+                    <h1 class="header__font">
                         TorrellCrafts <br>
-                        <span class="name">Toro-Abasi Udo</span>
+                        <span class="name sub-header__font">Toro-Abasi Udo</span>
                     </h1>
 
-                    <h2>Joined <span class="date__joined">2023-01-11</span></h2>
+                    <h2 class="sub-header__font">Joined <span class="date__joined">2023-01-11</span></h2>
                 </div>
 
-                <span class="user__bio">Bio not available</span>
+                <!-- bio -->
+                <p class="user__bio sub-header__font">Bio not available</p>
+                <!-- bio// -->
 
-                <div>
-                    <h1>
-                        Repo
-                        <span class="repo__no">#</span>
+                <!-- github user stats -->
+                <div class="github__user__stats">
+                    <h1 class="sub-header__font stats__headers">
+                        Repo <br>
+                        <span class="repo__no stats__count header__font">#</span>
                     </h1>
 
-                    <h1>
-                        Followers
-                        <span class="followers__no">#</span>
+                    <h1 class="sub-header__font stats__headers stats__divider">
+                        Followers <br>
+                        <span class="followers__no stats__count header__font">#</span>
                     </h1>
 
-                    <h1>
-                        Following
-                        <span class="following__no">#</span>
+                    <h1 class="sub-header__font stats__headers">
+                        Following <br>
+                        <span class="following__no stats__count header__font">#</span>
                     </h1>
                 </div>
-
-                <div>
-                    <div>
-                        <div>
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                    <div></div>
-                </div>
+                <!-- github user stats// -->
             </div>
             <!-- //github bio data container -->
         </div>
