@@ -30,6 +30,10 @@ SEARCH__BTN.addEventListener('click', ()=>{
         console.log('empty');
         const SEARCH__BOX = document.querySelector('.search__box')
         SEARCH__BOX.classList.add('error__animation');
+        SEARCH__BOX.style.border = '2px solid red';
+        setTimeout(()=>{
+            SEARCH__BOX.style.border = 'none';
+        }, 3000)
     } else {
         gitHubUserDataFetch(`${searchField}`);
     }
