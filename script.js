@@ -8,12 +8,13 @@ const REPO = document.querySelector('.repo__no');
 const FOLLOWERS = document.querySelector('.followers__no');
 const FOLLOWING = document.querySelector('.following__no');
 const GITHUB__USER__IMG = document.querySelector('.user__img');
+const SEARCH__BOX = document.querySelector('.search__box');
+
 
 function gitHubUserDataFetch(username) {
     fetch(`https://api.github.com/users/${username}`)
     .then(res => res.json())
     .then(data =>{
-        console.log(data);
         USERNAME.innerHTML = data.login;
         NAME.innerHTML = data.name;
         DATE__JOINED.innerHTML = data.created_at;
@@ -25,12 +26,11 @@ function gitHubUserDataFetch(username) {
     });
 };
 
-SEARCH__BTN.addEventListener('click', ()=>{
+
+function fetchAction() {
     let searchField = document.querySelector('input').value;
 
     if (searchField === '') {
-        console.log('empty');
-        const SEARCH__BOX = document.querySelector('.search__box');
         SEARCH__BOX.classList.add('error__animation');
         setTimeout(()=>{
             SEARCH__BOX.classList.remove('error__animation');
@@ -43,5 +43,18 @@ SEARCH__BTN.addEventListener('click', ()=>{
         
     } else {
         gitHubUserDataFetch(`${searchField}`);
+    };
+};
+
+
+
+SEARCH__BTN.addEventListener('click', ()=>{
+    fetchAction();
+});
+
+// for keyboard event if the enter key is pressed
+document.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') {
+        fetchAction();
     }
 });
