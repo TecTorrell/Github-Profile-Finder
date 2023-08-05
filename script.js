@@ -33,7 +33,7 @@ SEARCH__BTN.addEventListener('click', ()=>{
         SEARCH__BOX.style.border = '2px solid red';
         setTimeout(()=>{
             SEARCH__BOX.style.border = 'none';
-        }, 3000)
+        }, 1000)
     } else {
         gitHubUserDataFetch(`${searchField}`);
     }

@@ -205,7 +205,6 @@ input[type='text']{
     animation-name: errorShake;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
-    animation-delay: 200ms;
 }
 
 @keyframes errorShake {
