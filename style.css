@@ -17,6 +17,8 @@ font-family: 'Roboto Mono', monospace; */
 :root{
     --bd-radius: 0.3rem;
     --secondary-background-color: #4f5181;
+
+
 }
 
 body{
@@ -26,10 +28,33 @@ body{
     justify-content: center;
 }
 
+
+/* logo styling */
+.logo__text{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace; 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.logo__text::after{
+    width: 10rem;
+    height: 0.05rem;
+    background-color: #00ade7;
+    content: '';
+    margin-top: 0.5rem;
+}
+/* logo styling// */
+
 .data__container{
     width: 40rem;
 }
 
+
+/* search box area styling */
 .search__box{
     background-color: var(--secondary-background-color);
     width: 100%;
@@ -37,18 +62,75 @@ body{
     border-radius: var(--bd-radius);
     padding: 0.4rem;
     width: 100%;
+    display: flex;
+}
+
+.search__icon__container{
+    width: fit-content;
+}
+
+.search__icon__container svg{
+    fill: #00ade7;
+    height: 2.5rem;
 }
 
 input[type='text']{
     background-color: transparent;
     height: 100%;
-    width: 34rem;
+    width: 30rem;
+    border: transparent solid 0.05rem;
+    outline: none;
+    padding-left: 3rem;
+    transition: 300ms;
+    font-size: 18px;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .search__box button{
-    background-color: #7a2be2;
+    background-color: #00ade7;
     border: none;
     border-radius: var(--bd-radius);
     height: 100%;
-    width: 5rem;
+    width: 6rem;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
 }
+/* search box area styling// */
+
+
+/* search result container */
+.search__result__container{
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--bd-radius);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    height: auto;
+}
+/* search result container// */
+
+
+/* github user image */
+.github-user__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+}
+
+.github-user__image{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    padding: .1rem;
+    background-color: #00ade7;
+}
+/* github user image// */

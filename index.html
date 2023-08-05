@@ -9,7 +9,7 @@
     <!-- font one -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;400;500&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;400;500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
     <!-- //font one -->
 
     <!-- font two -->
@@ -20,67 +20,73 @@
 </head>
 <body>
     <div class="data__container">
-        <h1 class="logo__text">GPF</h1>
+        <h1 class="logo__text">GitHub_Profile.Finder🌐</h1>
         <!-- search box -->
         <div class="search__box">
-            <input type="text">
+            <!-- search icon -->
+            <div class="search__icon__container">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                    <path d="M378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l242 240q9 8.556 9 21.778T818-143q-9 9-22.222 9-13.222 0-21.778-9L533-384q-30 26-69.959 40.5T378-329Zm-1-60q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z"/>
+                </svg>
+            </div>
+            <!-- /search icon -->
+
+            <input placeholder="Search GitHub username....." type="text">
             <button>Search</button>
         </div>
         <!-- //search box -->
 
         <!-- search result container -->
-        <div>
+        <div class="search__result__container">
+            <!-- github user image conatiner -->
             <div>
-                <!-- github user image conatiner -->
-                <div>
-                    <div class="github-user__image">
-                        <img src="" alt="GitHub user image">
-                    </div>
+                <div class="github-user__image">
+                    <img src="/images/iPhone_e422f_IMG_2463.JPG" alt="GitHub user image">
                 </div>
-                <!-- //github user image conatiner -->
+            </div>
+            <!-- //github user image conatiner -->
 
-                <!-- github bio data container -->
+
+            <!-- github bio data container -->
+            <div>
                 <div>
-                    <div>
-                        <h1>
-                            TorrellCrafts <br>
-                            <span class="name">Toro-Abasi Udo</span>
-                        </h1>
+                    <h1>
+                        TorrellCrafts <br>
+                        <span class="name">Toro-Abasi Udo</span>
+                    </h1>
 
-                        <h2>Joined <span class="date__joined">2023-01-11</span></h2>
-                    </div>
+                    <h2>Joined <span class="date__joined">2023-01-11</span></h2>
+                </div>
 
-                    <span class="user__bio">Bio not available</span>
+                <span class="user__bio">Bio not available</span>
 
-                    <div>
-                        <h1>
-                            Repo
-                            <span class="repo__no">#</span>
-                        </h1>
+                <div>
+                    <h1>
+                        Repo
+                        <span class="repo__no">#</span>
+                    </h1>
 
-                        <h1>
-                            Followers
-                            <span class="followers__no">#</span>
-                        </h1>
+                    <h1>
+                        Followers
+                        <span class="followers__no">#</span>
+                    </h1>
 
-                        <h1>
-                            Following
-                            <span class="following__no">#</span>
-                        </h1>
-                    </div>
+                    <h1>
+                        Following
+                        <span class="following__no">#</span>
+                    </h1>
+                </div>
 
+                <div>
                     <div>
                         <div>
-                            <div>
-                                <img src="" alt="">
-                            </div>
+                            <img src="" alt="">
                         </div>
-                        <div></div>
                     </div>
+                    <div></div>
                 </div>
-                
-                <!-- //github bio data container -->
             </div>
+            <!-- //github bio data container -->
         </div>
         <!-- //search result container -->
     </div>
