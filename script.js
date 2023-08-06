@@ -21,14 +21,27 @@ function gitHubUserDataFetch(username) {
         };
     })
     .then(data =>{
-        USERNAME.innerHTML = data.login;
-        NAME.innerHTML = data.name;
-        DATE__JOINED.innerHTML = data.created_at;
-        BIO.innerHTML = data.bio;
-        REPO.innerHTML = data.public_repos;
-        FOLLOWERS.innerHTML = data.followers;
-        FOLLOWING.innerHTML = data.following;
-        GITHUB__USER__IMG.src = data.avatar_url;
+        if (data.bio === null) {
+            const DATA__LENGTH = data.created_at.slice(0, -10);
+            USERNAME.innerHTML = data.login;
+            NAME.innerHTML = data.name;
+            DATE__JOINED.innerHTML = DATA__LENGTH;
+            BIO.innerHTML = 'Bio not available';
+            REPO.innerHTML = data.public_repos;
+            FOLLOWERS.innerHTML = data.followers;
+            FOLLOWING.innerHTML = data.following;
+            GITHUB__USER__IMG.src = data.avatar_url;
+        } else {
+            const DATA__LENGTH = data.created_at.slice(0, -10);
+            USERNAME.innerHTML = data.login;
+            NAME.innerHTML = data.name;
+            DATE__JOINED.innerHTML = DATA__LENGTH;
+            BIO.innerHTML = data.bio;
+            REPO.innerHTML = data.public_repos;
+            FOLLOWERS.innerHTML = data.followers;
+            FOLLOWING.innerHTML = data.following;
+            GITHUB__USER__IMG.src = data.avatar_url;
+        }
     })
     .catch(error =>{
         alert('An error occurred while trying to fetch the URL.');
@@ -61,7 +74,6 @@ SEARCH__BTN.addEventListener('click', ()=>{
     fetchAction();
 });
 
-// for keyboard event if the enter key is pressed
 document.addEventListener('keydown', function(e){
     if (e.key === 'Enter') {
         fetchAction();
