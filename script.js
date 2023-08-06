@@ -13,7 +13,13 @@ const SEARCH__BOX = document.querySelector('.search__box');
 
 function gitHubUserDataFetch(username) {
     fetch(`https://api.github.com/users/${username}`)
-    .then(res => res.json())
+    .then(res => {
+        if (res.status === 404) {
+            console.error('Username not found');
+        } else {
+            return res.json();
+        };
+    })
     .then(data =>{
         USERNAME.innerHTML = data.login;
         NAME.innerHTML = data.name;
@@ -23,6 +29,9 @@ function gitHubUserDataFetch(username) {
         FOLLOWERS.innerHTML = data.followers;
         FOLLOWING.innerHTML = data.following;
         GITHUB__USER__IMG.src = data.avatar_url;
+    })
+    .catch(error =>{
+        alert('An error occurred while trying to fetch the URL.');
     });
 };
 
@@ -41,7 +50,7 @@ function fetchAction() {
             SEARCH__BOX.style.border = 'none';
         }, 1000);
         
-    } else {
+    }else {
         gitHubUserDataFetch(`${searchField}`);
     };
 };
